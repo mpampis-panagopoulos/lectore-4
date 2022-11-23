@@ -1,0 +1,13 @@
+class Person {
+        public:
+string name; 
+unsigned short year; 	
+int phone; 
+};   // Προσοχή, χρειάζεται «;».
+int main() { 
+Person p1, p2; 
+p1.name = “Giannis";   p2.name = “Maria"; 
+p1.year = 1968;   p2.year = 1970;
+p1.phone = 2108203571;   p2.phone = 2108203572; 
+cout << p1.name << ": " << p1.year << ", " << p1.phone << endl
+<< p2.name << ": " << p2.year << ", " << p2.phone << endl; 
