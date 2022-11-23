@@ -1,3 +1,4 @@
+// παραδειγμα 1
 class Person { 
 private:   // Μόνο οι μέθοδοι της Person έχουν πρόσβαση            
 string name; 
@@ -13,4 +14,18 @@ year = y;
 } 
 void Person:: print() { 
            cout<< name << ": " << year << endl; test(); //Οι μέθοδοι της Person έχουν πρόσβαση στις ιδιωτικές μεταβλητές της Person.
+}
+
+
+//παραδειγμα 1 συν
+void Person::test() { cout<< “test" << endl; }
+int main() { 
+Person p1, p2; 
+p1.name = “Giannis”;   // Λάθος. Το name είναι ιδιωτικό μέλος. 
+p1.set(“Giannis”, 1968);  // ΟΚ.  Δημόσια μέθοδος 
+p2.set(“Maria”, 1970); 
+p1.print();               // Τυπώνει «Giannis: 1968 test». 
+p2.print();               // Τυπώνει «Maria: 1970 test». 
+cout<< p1.name;       // Λάθος. Το name είναι ιδιωτικό μέλος. 
+p1.test();             // Λάθος. Η test() είναι ιδιωτικό μέλος. 
 }
