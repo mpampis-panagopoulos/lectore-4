@@ -1,0 +1,16 @@
+class Person { 
+private:   // Μόνο οι μέθοδοι της Person έχουν πρόσβαση            
+string name; 
+unsigned short year; 
+void test(); 
+public:    //Σε αυτά έχουν πρόσβαση όλοι          
+void setData(const string& n, unsigned short y); //const: ε.ε.
+void print(); 
+};  
+void Person::setData(const string& n, unsigned short y) { 
+name = n; //Οι μέθοδοι της Person έχουν πρόσβαση στις ιδιωτικές μεταβλητές της Person.
+year = y;   
+} 
+void Person:: print() { 
+           cout<< name << ": " << year << endl; test(); //Οι μέθοδοι της Person έχουν πρόσβαση στις ιδιωτικές μεταβλητές της Person.
+}
