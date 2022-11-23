@@ -1,0 +1,35 @@
+//Enum - switch
+
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    enum Gender { Male, Female };
+    
+    Gender gender = Male;
+ 
+    switch (gender)
+    {
+    case Male:
+        cout << "Gender is Male";
+        break;
+    case Female:
+        cout << "Gender is Female";
+        break;
+    default:
+        cout << "Value can be Male or Female";
+    }
+    return 0;
+}
+
+Άλλο παράδειγμα:
+enum Color { red, green, blue };
+Color r = red;
+ 
+switch(r)
+{
+    case red  : std::cout << "red\n";   break;
+    case green: std::cout << "green\n"; break;
+    case blue : std::cout << "blue\n";  break;
+}
