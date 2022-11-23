@@ -1,0 +1,18 @@
+//εντος κλασης
+class Person {
+  public:
+    string name;
+    unsigned short year; 
+    unsigned phone; 
+    void greeting() {
+	       cout << “My name is " 
+	       << name << endl;
+	  }
+     void tellAge();
+};
+
+
+//εκτος κλασης 
+void Person::tellAge() {
+	cout << "Είμαι " << year;cout << 	year==1? "χρόνου": "χρονών" << 	endl;
+}
