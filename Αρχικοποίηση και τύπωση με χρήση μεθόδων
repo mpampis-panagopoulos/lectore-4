@@ -1,0 +1,24 @@
+//Αρχικοποίηση και τύπωση με χρήση μεθόδων 
+#include <iostream>  
+using namespace std;  
+class Student {  
+   public:  
+       int id; //πεδίο      
+       string name; //πεδίο      
+       void insert(int i, string n) {    
+            id = i;    
+            name = n;    
+        }    
+       void display() {    
+            cout<<id<<"  "<<name<<endl;    
+        }    
+};  
+int main(void) {  
+    Student s1; // Δημιουργία αντικειμένου Student   
+    Student s2; // Δημιουργία αντικειμένου Student   
+    s1.insert(201, "Dimitris");    
+    s2.insert(202, "Maria");    
+    s1.display();    
+    s2.display();  
+    return 0;  
+}  
